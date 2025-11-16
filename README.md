@@ -1,1 +1,1 @@
-# Accordion-with-Capybaras
+Accordion with JS, accessibility, BEM, and capybaras
