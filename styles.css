@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: rgb(224, 224, 224);
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-header {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", Arial, sans-serif;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2em;
+}
+
+.accordion__item {
+  margin-top: 3rem;
+}
+
+.accordion-item__header {
+  position: relative;
+  width: 50rem;
+  height: 5rem;
+  background-color: rgb(202, 247, 200);
+  border: 1px solid black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion-item__header:hover {
+  background-color: rgb(162, 216, 159);
+}
+
+.accordion-item__chevron-img {
+  position: absolute;
+  top: 50%;
+  right: 0.3rem;
+  transform: translateY(-50%);
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.3s;
+  transform-origin: center center;
+}
+
+.accordion__item--active .accordion-item__chevron-img {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion-item__content {
+  width: 50rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion__item--active .accordion-item__content {
+  max-height: 40rem;
+}
+
+.accordion-item__capybara-img {
+  object-fit: cover;
+}
+
+.unknown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 999;
+}
+
+.unknown__creature {
+  width: 40rem;
+}
+
+.unknown__text {
+  color: white;
+  font-size: 2rem;
+}
+
+.unknown--hidden {
+  display: none;
+}
+
+@media (max-width: 33em) {
+  .accordion-item__header {
+    width: 35rem;
+  }
+
+  .accordion-item__content {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 23em) {
+  .accordion-item__header {
+    width: 30rem;
+  }
+
+  .accordion-item__content {
+    width: 30rem;
+  }
+}

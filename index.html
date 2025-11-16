@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capybara accordion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="main-header">Accordion with capybaras</h1>
+    </header>
+
+    <main class="accordion">
+      <section class="accordion__item accordion-item">
+        <h2>
+          <button
+            class="accordion-item__header"
+            aria-expanded="false"
+            aria-controls="accordion-content-1"
+            id="accordion-1"
+          >
+            Capybara 1
+            <img
+              class="accordion-item__chevron-img"
+              src="./images/chevron-down.svg"
+              alt=""
+            />
+          </button>
+        </h2>
+        <div
+          class="accordion-item__content"
+          id="accordion-content-1"
+          role="region"
+          aria-labelledby="accordion-1"
+          aria-hidden="true"
+        >
+          <img
+            class="accordion-item__capybara-img"
+            src="./images/capybara1.webp"
+            alt="Capybara"
+          />
+        </div>
+      </section>
+
+      <section class="accordion__item accordion-item">
+        <h2>
+          <button
+            class="accordion-item__header"
+            aria-expanded="false"
+            aria-controls="accordion-content-2"
+            id="accordion-2"
+          >
+            Capybara 2
+            <img
+              class="accordion-item__chevron-img"
+              src="./images/chevron-down.svg"
+              alt=""
+            />
+          </button>
+        </h2>
+        <div
+          class="accordion-item__content"
+          id="accordion-content-2"
+          role="region"
+          aria-labelledby="accordion-2"
+          aria-hidden="true"
+        >
+          <img
+            class="accordion-item__capybara-img"
+            src="./images/capybara2.webp"
+            alt="Capybara"
+          />
+        </div>
+      </section>
+
+      <section class="accordion__item accordion-item">
+        <h2>
+          <button
+            class="accordion-item__header"
+            aria-expanded="false"
+            aria-controls="accordion-content-3"
+            id="accordion-3"
+          >
+            Capybara 3
+            <img
+              class="accordion-item__chevron-img"
+              src="./images/chevron-down.svg"
+              alt=""
+            />
+          </button>
+        </h2>
+        <div
+          class="accordion-item__content"
+          id="accordion-content-3"
+          role="region"
+          aria-labelledby="accordion-3"
+          aria-hidden="true"
+        >
+          <img
+            class="accordion-item__capybara-img"
+            src="./images/capybara3.webp"
+            alt="Capybara"
+          />
+        </div>
+      </section>
+
+      <section class="accordion__item accordion-item">
+        <h2>
+          <button
+            class="accordion-item__header"
+            aria-expanded="false"
+            aria-controls="accordion-content-4"
+            id="accordion-4"
+          >
+            Capybara 4
+            <img
+              class="accordion-item__chevron-img"
+              src="./images/chevron-down.svg"
+              alt=""
+            />
+          </button>
+        </h2>
+        <div
+          class="accordion-item__content"
+          id="accordion-content-4"
+          role="region"
+          aria-labelledby="accordion-4"
+          aria-hidden="true"
+        >
+          <img
+            class="accordion-item__capybara-img"
+            src="./images/capybara4.webp"
+            alt="Silly Capybara"
+          />
+        </div>
+      </section>
+    </main>
+
+    <div class="unknown unknown--hidden" aria-hidden="true">
+      <img
+        class="unknown__creature"
+        src="images/creature.webp"
+        alt="creature"
+      />
+      <p class="unknown__text">you didn't see that</p>
+    </div>
+  </body>
+</html>
